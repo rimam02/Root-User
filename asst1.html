@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    :root {
+      --font-size: 32px;
+    }
+    h1, p {
+      font-size: var(--font-size);
+    }
+    button {
+      padding: 10px 20px;
+      cursor: pointer;
+      background-color: aqua;
+    }
+  </style>
+</head>
+<body>
+  <h1>I am a student</h1>
+  <p>Asst 1</p>
+  <button onclick="changeSize()">Change Font Size</button>
+  <script>
+    let big = true;
+    function changeSize() {
+      big = !big;
+      document.documentElement.style.setProperty('--font-size', big ? '32px' : '16px');
+    }
+  </script>
+</body>
+</html>
